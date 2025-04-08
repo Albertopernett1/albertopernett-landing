@@ -33,14 +33,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-start mb-12">
             <div className="md:w-1/3 text-center md:text-left mb-8 md:mb-0 md:sticky md:top-10">
               <div className="mb-6 inline-block">
-                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mx-auto md:mx-0 flex items-center justify-center">
+                <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-lg mx-auto md:mx-0 flex items-center justify-center">
                   <Image 
                     src="/AlbertoPernett.jpg" 
                     alt="Alberto Pernett" 
-                    width={120} 
-                    height={120} 
+                    width={160} 
+                    height={160} 
                     className="rounded-full shadow object-cover"
                     priority
+                    quality={100}
                   />
                 </div>
               </div>
