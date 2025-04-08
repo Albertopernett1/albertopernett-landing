@@ -25,7 +25,7 @@ export default function Home() {
         <title>Alberto Pernett | Personal Website</title>
         <meta name="description" content="Alberto Pernett's personal website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/editado.PNG" />
       </Head>
       <main className={`min-h-screen bg-[#eaeaea] py-10 px-4 sm:px-6 ${inter.className}`}>
         <div className="max-w-5xl mx-auto">
