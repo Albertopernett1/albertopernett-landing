@@ -24,16 +24,16 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     
     if (!email || !email.includes('@')) {
-      alert('Please enter a valid email address');
+      alert("Please enter a valid email address");
       return;
     }
 
     setIsSending(true);
     
     // Prepare message based on selected language
-    const message = language === 'es' 
+    const message = language === "es" 
       ? "Hola, me interesaría contactarme contigo para negociar un proyecto. Por favor respóndeme este mensaje si te interesa hablar conmigo."
-      : "Hi! I'd like to connect with you to discuss a project. Please reply if you're interested in working together.";
+      : "Hi! I&apos;d like to connect with you to discuss a project. Please reply if you&apos;re interested in working together.";
     
     try {
       // Diagnóstico de error con EmailJS - Imprimir variables de entorno
@@ -65,14 +65,14 @@ const ContactForm: React.FC = () => {
       
       console.log("Email enviado con éxito:", result);
       setShowSuccess(true);
-      setEmail('');
+      setEmail("");
       setTimeout(() => setShowSuccess(false), 5000); // Hide success message after 5 seconds
     } catch (error) {
-      console.error('Error detallado al enviar email:', error);
+      console.error("Error detallado al enviar email:", error);
       if (error instanceof Error) {
         alert(`Error al enviar: ${error.message}. Por favor intenta nuevamente.`);
       } else {
-        alert('Failed to send message. Please try again later.');
+        alert("Failed to send message. Please try again later.");
       }
     } finally {
       setIsSending(false);
@@ -97,22 +97,22 @@ const ContactForm: React.FC = () => {
           <button
             type="button"
             className={`px-4 py-2 rounded-md transition-colors ${
-              language === 'es' 
-                ? 'bg-orange-500 text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              language === "es" 
+                ? "bg-orange-500 text-white" 
+                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
-            onClick={() => setLanguage('es')}
+            onClick={() => setLanguage("es")}
           >
             Español
           </button>
           <button
             type="button"
             className={`px-4 py-2 rounded-md transition-colors ${
-              language === 'en' 
-                ? 'bg-orange-500 text-white' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              language === "en" 
+                ? "bg-orange-500 text-white" 
+                : "bg-gray-200 text-gray-700 hover:bg-gray-300"
             }`}
-            onClick={() => setLanguage('en')}
+            onClick={() => setLanguage("en")}
           >
             English
           </button>
@@ -123,12 +123,12 @@ const ContactForm: React.FC = () => {
           className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
           disabled={isSending}
         >
-          {isSending ? 'Sending...' : 'Send message'}
+          {isSending ? "Sending..." : "Send message"}
         </button>
         
         {showSuccess && (
           <div className="mt-2 text-green-600 font-medium text-center">
-            📬 Message sent! I'll get back to you within 7 hours. / ¡Responderé en máximo 7 horas!
+            📬 Message sent! I&apos;ll get back to you within 7 hours. / ¡Responderé en máximo 7 horas!
           </div>
         )}
       </form>

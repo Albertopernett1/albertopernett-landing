@@ -66,7 +66,7 @@ export default function Home() {
                 &ldquo;I got tired of waiting for opportunities, so I built them myself. A follower of Christ.&rdquo;
               </p>
               <p className="text-gray-600 mb-6">
-                Interested in working together or automating your startup with AI? Drop me a message and I'll get back to you 👇
+                Interested in working together or automating your startup with AI? Drop me a message and I&apos;ll get back to you 👇
               </p>
 
               {/* Contact Form */}
